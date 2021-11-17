@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+        <!-- Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+     
+          <!--Iconos-->
+    <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+        <!--Stylsheets-->
+    <link rel="stylesheet" href="./css/estilosFooter.css">
+    <link type="text/css" href="./css/estilosIndex.css" rel="stylesheet" />
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;900&display=swap"
+        rel="stylesheet">
+        <!-- owl carousel -->
+<link rel="stylesheet" href="./owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="./owlcarousel/assets/owl.theme.default.min.css">
+
+
+     <title>bicishop</title>   
+</head>
+
+<body>
+
+    <!--NAVBAR-->
+<header> 
+    <nav>
+        <div class="navbar-top sticky top">
+            <div>
+                <button id="menuButton"><i class="fas fa-bars"></i></button>
+                <a href="index.html">
+                    <h2 class="logo">BICICLETERIA</h2>
+                </a>
+            </div>
+            <div>
+                <div class="account">
+                    <a href="./login.html">
+                        <button class="account-btn">
+                            <i class="fas fa-user-alt"></i>
+                        </button>
+                        <span class="account-text">My cuenta</span>
+                    </a>
+                    <!--Aca vamos a hacer click y se va a mostrar carrito-->
+                </div>
+                <!--Carrito-->
+                <div class="shopping-cart">
+                    <div class="sum-prices">
+
+                        <i class="fas fa-shopping-cart shoppingCartButton"></i>
+                        <!--suma de costos -->
+                        <h6 id="sum-prices"></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        <!-- barra de busqueda -->
+        <div class="searchbar">
+            <form action="#">
+                <input type="search" placeholder="buscar bicis" />
+                <i class="fa fa-search" id="search-icon"></i>
+            </form>
+        </div>
+        <br>
+        </div>
+        <div class="producstOnCart hide">
+            <div class="overlay"></div>
+            <div class="top">
+                <button id="closeButton">
+                    <i class="fas fa-times-circle"></i>
+                </button>
+                <h3>Cart</h3>
+            </div>
+            <ul id="buyItems">
+                <h4 class="empty">Your shopping cart is empty</h4>
+              
+            <a href="./checkout.html"><button class="btn checkout hidden">Check out</button></a>
+        </div>
+        
+    </nav>
+       
+        <!--SLIDER DE FOTOS--> 
+
+        
+
+    </header>
+<section>
+    <div class="owl-carousel slider">
+            <div> <img class="img-slider" src="./Imgs/bici1.jpg" /> </div>
+            <div> <img class="img-slider" src="./Imgs/bici2.jpg" /></div>
+            <div> <img class="img-slider" src="./Imgs/bici6.jpg" /> </div>
+            <div> <img class="img-slider" src="./Imgs/bici10.jpg" /></div>
+            <div> <img class="img-slider" src="./Imgs/bici5.jpg" /></div>
+            <div> <img class="img-slider" src="./Imgs/bici13a.jpg" /></div>
+        </div>
+</section>
+
+
+
+
+    
+    <!--SECCION PRODUCTOS--> 
+
+    <main>
+        <div class="row" id="contenidoGenerado">
+        </div>
+    </main>
+ 
+        <!-- SECCION PRODUCTOS
+        <section class="main-section">
+            <div class="product-container">
+                <h3>Bicis mas populares</h3>
+                <div class="products">
+
+
+                    <div class="product">
+                        <div class="product-under">
+                            <div class="product-image">
+                                <img src="./Imgs/bici1.jpg" alt="bicis populares" />
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="1">
+                                        <i class="fas fa-cart-plus"></i>Agregar
+                                        al carrito
+                                    </button>
+                                    <a href="detail_page.html" class="btn btn-small">Detalle</a>
+                                </div>
+                            </div>
+                            <div class="product-summary">
+                                <h4 class="productName">Bici Fast</h4>
+                                <span class="stars"></span>
+                                <p>
+                                    Esta esta buenisima
+                                </p>
+                                <h6 class="price">
+                                    $<span class="priceValue">62000</span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="product">
+                        <div class="product-under">
+                            <figure class="product-image">
+                                <img src="./Imgs/bici4.jpg" alt="bicis populares" />
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="2">
+                                        <i class="fas fa-cart-plus"></i>Agregar al carrito
+                                    </button>
+                                    <a href="detail_page.html" class="btn btn-small">Detalle</a>
+                                </div>
+                            </figure>
+                            <div class="product-summary">
+                                <h4 class="productName">Bici Cool</h4>
+                                <span class="stars"></span>
+                                <p>
+                                    Lo que buscabas
+                                </p>
+                                <h6 class="price">
+                                    $<span class="priceValue">45000</span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="product">
+                        <div class="product-under">
+                            <figure class="product-image">
+                                <img src="./Imgs/bici5.jpg" alt="bicis populares" />
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="3">
+                                        <i class="fas fa-cart-plus"></i>Agregar al carrito
+                                    </button>
+                                    <a href="detail_page.html" class="btn btn-small">Detalle</a>
+                                </div>
+                            </figure>
+                            <div class="product-summary">
+                                <h4 class="productName">Bici Nieve</h4>
+                                <span class="stars"></span>
+                                <p>
+                                    Uauuuu para esquiar al mismo tiempo
+                                </p>
+                                <h6 class="price">
+                                    $<span class="priceValue">50000</span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="product">
+                        <div class="product-under">
+                            <figure class="product-image">
+                                <img src="./Imgs/bici2.jpg" alt="bicis populares" />
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="4">
+                                        <i class="fas fa-cart-plus"></i>Agregar al carrito
+                                    </button>
+                                    <a href="detail_page.html" class="btn btn-small">Detalle</a>
+                                </div>
+                            </figure>
+                            <div class="product-summary">
+                                <h4 class="productName">Bici Carrera</h4>
+                                <span class="stars"></span>
+                                <p>
+                                    No lleges mas tarde al trabajo!
+                                </p>
+                                <h6 class="price">
+                                    $<span class="priceValue">38000</span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="product">
+                        <div class="product-under">
+                            <div class="product-image">
+                                <img src="./Imgs/bici13.jpg" alt="bicis populares" />
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="5">
+                                        <i class="fas fa-cart-plus"></i>Agregar
+                                        al carrito
+                                    </button>
+                                    <a href="detail_page.html" class="btn btn-small">Detalle</a>
+                                </div>
+                            </div>
+                            <div class="product-summary">
+                                <h4 class="productName">Bici Ciudad</h4>
+                                <span class="stars"></span>
+                                <p>
+                                    Recorrete toda la city tranki 
+                                </p>
+                                <h6 class="price">
+                                    $<span class="priceValue">40000</span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="product">
+                        <div class="product-under">
+                            <div class="product-image">
+                                <img src="./Imgs/bici12.jpg" alt="bicis populares" />
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="6">
+                                        <i class="fas fa-cart-plus"></i>Agregar
+                                        al carrito
+                                    </button>
+                                    <a href="detail_page.html" class="btn btn-small">Detalle</a>
+                                </div>
+                            </div>
+                            <div class="product-summary">
+                                <h4 class="productName">Bici Montaña</h4>
+                                <span class="stars"></span>
+                                <p>
+                                    Para tus travesias mas extremas
+                                </p>
+                                <h6 class="price">
+                                    $<span class="priceValue">58000</span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-under">
+                            <div class="product-image">
+                                <img src="./Imgs/bici15.jpg" alt="bicis populares" />
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="7">
+                                        <i class="fas fa-cart-plus"></i>Agregar
+                                        al carrito
+                                    </button>
+                                    <a href="detail_page.html" class="btn btn-small">Detalle</a>
+                                </div>
+                            </div>
+                            <div class="product-summary">
+                                <h4 class="productName">Bici Ejecutiva</h4>
+                                <span class="stars"></span>
+                                <p>
+                                    Liviana y facil de andar
+                                </p>
+                                <h6 class="price">
+                                    $<span class="priceValue">32000</span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product">
+                        <div class="product-under">
+                            <div class="product-image">
+                                <img src="./Imgs/bici14.jpg" alt="bicis populares" />
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="8">
+                                        <i class="fas fa-cart-plus"></i>Agregar
+                                        al carrito
+                                    </button>
+                                    <a href="detail_page.html" class="btn btn-small">Detalle</a>
+                                </div>
+                            </div>
+                            <div class="product-summary">
+                                <h4 class="productName">Bici Power</h4>
+                                <span class="stars"></span>
+                                <p>
+                                    Esta esta on fire
+                                </p>
+                                <h6 class="price">
+                                    $<span class="priceValue">60000</span>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+
+    <!--::::Pie de Pagina::::::-->
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="./Imgs/logo-bicicleteri-lila.png" alt="Logo de Bicicletería">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>DATOS DE CONTACTO</h2>
+                <p>Buenos Aires, Argentina</p>
+                <p>info@bicicleteria.com</p>
+                <p>Sólo atención online</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2021 <b>Bicicletería</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+
+
+
+    <!-- scripts -->
+    <script src="./jquery/jquery.min.js"></script>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/multislider.min.js"></script>
+    
+    <script src="./owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+    <script src="./js/data.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+
+</html>
