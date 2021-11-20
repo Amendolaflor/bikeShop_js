@@ -11,7 +11,6 @@ class Bicicleta {
   }
 }
 
-//// ORDENAR VARIABLES GLOBALES QUEE S UN QUILOMBO JAJAJ
 const listaProductos = [];
 
 for (let i = 0; i < todasLasBicicletas.length; i++) {
@@ -19,12 +18,15 @@ for (let i = 0; i < todasLasBicicletas.length; i++) {
 }
 console.log(listaProductos);
 
+//// ORDENAR VARIABLES GLOBALES QUEE S UN QUILOMBO JAJAJ
+const parentElement = document.querySelector("#buyItems");
+const cartSumPrice = document.querySelector("#sum-prices");
+
 let productsInCart = JSON.parse(localStorage.getItem("shoppingCart"));
 if (!productsInCart) {
   productsInCart = [];
 }
-const parentElement = document.querySelector("#buyItems");
-const cartSumPrice = document.querySelector("#sum-prices");
+
 
 /// FUNCION PARA SUMAR EL PRECIO TOTAL DE LA COMPRA VER DE PROBAR CON REDUCE
 const SumPrice = function () {

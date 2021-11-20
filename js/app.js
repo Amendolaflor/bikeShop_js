@@ -37,8 +37,8 @@ const crearFichaProducto = function (bici) {
                                     <button class="btn btn-small addToCart" id=${bici.id}>
                                         <i class="fas fa-cart-plus"></i>Agregar
                                         al carrito
-                                    </button>
-                                    <a href="detail_page.html" class="btn btn-small">Detalle</a>
+                                    </button>                                    
+                                    <a data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-small">Detalle</a>
                                 </div>
                                 </div>
                                 <div class="product-summary">
@@ -58,6 +58,7 @@ const crearFichaProducto = function (bici) {
   cont_father.appendChild(cont_child);
   let botones = document.getElementById(bici.id);
   console.log(botones);
+ 
 };
 
 /// recorro el array de productos para crear una fichas por cada uno de sus indices
@@ -83,3 +84,13 @@ $(".play").on("click", function () {
 $(".stop").on("click", function () {
   owl.trigger("stop.owl.autoplay");
 });
+
+function disableBodyScroll(){
+ const element = document.querySelector("#appBody");
+ element.classList.add("stop-scroll");
+}
+
+function enableBodyScroll(){
+ const element = document.querySelector("#appBody");
+ element.classList.remove("stop-scroll");
+}
