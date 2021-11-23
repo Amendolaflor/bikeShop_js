@@ -69,7 +69,7 @@ const crearFichaDetalle = function(bici) {
                                   <img src="${bici.image}" alt="bici" width="100%">
                                 </div>
                                 <div class="col xs-12 md-6 cont_descripcion">
-                                  <h3>${bici.name}</h3>
+                                  <h4 class="productName">${bici.name}</h4>
                                   <p>${bici.detail}</p> 
                                   <button type="button" class="btn btn-small" data-dismiss="modal" id="cerrar${bici.id}">Cerrar
                                   </button>

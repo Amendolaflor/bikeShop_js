@@ -56,7 +56,7 @@
                     <div class="shopping-cart">
                         <div class="sum-prices">
                             <i class="fas fa-shopping-cart shoppingCartButton"></i>
-                            <a href="./checkout.html"><button class="btn btn-outline-light">Check out</button></a>                              
+                            <a href="./checkout.html"><button class="btn btn-outline-light">Comprar</button></a>                              
                         </div>
                     </div>
                 </div>
@@ -67,19 +67,13 @@
                     <button id="closeButton">
                         <i class="fas fa-times-circle"></i>
                     </button>
-                    <h3>Carrito</h3>
-                    
+                    <h3>Carrito</h3>                    
                 </div>
                 <div>
-                      <h6 id="sum-prices"></h6>  
-                    </div>
-                  
-                <ul id="buyItems">
-                   
-                    <h4 class="empty">Tu carrito esta vacio</h4>
-                    
- 
-                    
+                      <h4 id="sum-prices"></h4>  
+                    </div>                  
+                <ul id="buyItems">                   
+                    <h4 class="empty">Tu carrito esta vacio</h4>                    
             </div>
 
         </nav>
@@ -101,20 +95,18 @@
     <!--SECCION PRODUCTOS-->
 
 
-
-
     <main>
          <!-- Modal detalle de productos -->  
         <div id="detailContainer">
 
-            <div class="container" id="bebe">
+            <div class="container">
   <div class="modal fade bd-example-modal-lg" id="exampleModalCenter" tabindex="-1" role="dialog"
             aria-labelledby="myLargeModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-body" >
                         <div class="row" id="insideModal">
-                            
+                          <!-- detalle del producto creado dinamicamente    -->
                         </div>
                     </div>
                 </div>
@@ -124,12 +116,12 @@
         </div>
        <!-- Cards de productos -->        
         <div class="row" id="productContainer">
+            <!-- contenido creado dinamicamente    -->
         </div>
     </main>
 
 
     <!--::::Pie de Pagina::::::-->
-
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
@@ -176,6 +168,7 @@
     <script src="./js/data.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/cart.js"></script>
+    <script src="./js/checkout.js"></script>
 </body>
 
 </html>
