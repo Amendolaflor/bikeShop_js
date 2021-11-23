@@ -1,4 +1,4 @@
-/// Funcion para cargar el slider una vez que el documento ya esta en el DOM
+/// Funcion para ejecutar el slider una vez que DOM ha sido cargado
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel();
 });
@@ -42,8 +42,7 @@ const crearFichaProducto = function (bici) {
                                 </div>
                                 </div>
                                 <div class="product-summary">
-                                    <h4 class="productName">${bici.name}</h4>
-                                    <span class="stars"></span>
+                                    <h4 class="productName">${bici.name}</h4>                                    
                                     <p>
                                         ${bici.description}
                                     </p>
@@ -60,7 +59,7 @@ const crearFichaProducto = function (bici) {
   console.log(botones); 
 };
 
-
+/// Funcion para renderizar los detalles de cada producto
 const crearFichaDetalle = function(bici) {
   let botonDetalle = document.getElementById(`detalle${bici.id}`);
   botonDetalle.addEventListener("click", () => {

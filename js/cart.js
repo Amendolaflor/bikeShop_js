@@ -29,19 +29,19 @@ if (!productsInCart) {
 }
 
 
-/// FUNCION PARA SUMAR EL PRECIO TOTAL DE LA COMPRA VER DE PROBAR CON REDUCE
+/// FUNCION PARA SUMAR EL PRECIO TOTAL DE LA COMPRA 
 const SumPrice = function () {
-  // 4
   let sum = 0;
   productsInCart.forEach((item) => {
     sum += item.price;
   });
   return sum;
+
 };
 
+SumPrice()
 /// FUNCION PARA RENDERIZAR EL CARRITO
 const updateShoppingCartHTML = function () {
-  // 3
   localStorage.setItem("shoppingCart", JSON.stringify(productsInCart));
   if (productsInCart.length > 0) {
     let result = productsInCart.map((product) => {
@@ -55,23 +55,25 @@ const updateShoppingCartHTML = function () {
 							<button class="button-minus" data-id=${product.id}>-</button>
 							<span class="countOfProduct">${product.count}</span>
 							<button class="button-plus" data-id=${product.id}>+</button>
+              
 						</div>
+            
 					</div>
-				</li>`;
+				</li>
+        
+        `;
     });
     parentElement.innerHTML = result.join("");
-    //document.querySelector('.checkout').classList.remove('hidden');
-    //cartSumPrice.innerHTML = '$' + SumPrice();
+    cartSumPrice.innerHTML = 'Subtotal: $' + SumPrice();
+
   } else {
-    //document.querySelector('.checkout').classList.add('hidden');
     parentElement.innerHTML = '<h4 class="empty">Tu carrito esta vacio</h4>';
-    //cartSumPrice.innerHTML = '';
+    cartSumPrice.innerHTML = '';
   }
 };
 
 /// FUNCION PARA AGREGAR PRODUCTOS AL ARRAY SUMANDO LA CANTIDAD SI ES QUE YA ESTA AGREGADO
 function updateProductsInCart(product) {
-  // 2
   for (let i = 0; i < productsInCart.length; i++) {
     if (productsInCart[i].id == product.id) {
       productsInCart[i].count += 1;
@@ -99,8 +101,7 @@ console.log(productsInCart);
 agregar(listaProductos);
 
 /// EVENTO PARA CONTROLAR LOS CLICKS EN BOTONES DE + Y - TANTO SEA PARA SUMAR CANTIDAD DE PRODUCTOS COMP PARA RESTAR
-parentElement.addEventListener("click", (e) => {
- 
+parentElement.addEventListener("click", (e) => { 
   const plusBtn = e.target.classList.contains("button-plus");
   const minusBtn = e.target.classList.contains("button-minus");
   if (plusBtn || minusBtn) {
