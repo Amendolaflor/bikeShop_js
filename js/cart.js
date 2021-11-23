@@ -8,6 +8,7 @@ class Bicicleta {
     this.count = datos.count;
     this.image = datos.image;
     this.description = datos.description;
+    this.detail = datos.detail
   }
 }
 
@@ -18,7 +19,7 @@ for (let i = 0; i < todasLasBicicletas.length; i++) {
 }
 console.log(listaProductos);
 
-//// ORDENAR VARIABLES GLOBALES QUEE S UN QUILOMBO JAJAJ
+//// VARIABLES GLOBALES 
 const parentElement = document.querySelector("#buyItems");
 const cartSumPrice = document.querySelector("#sum-prices");
 
@@ -37,6 +38,7 @@ const SumPrice = function () {
   });
   return sum;
 };
+
 /// FUNCION PARA RENDERIZAR EL CARRITO
 const updateShoppingCartHTML = function () {
   // 3
@@ -66,6 +68,7 @@ const updateShoppingCartHTML = function () {
     //cartSumPrice.innerHTML = '';
   }
 };
+
 /// FUNCION PARA AGREGAR PRODUCTOS AL ARRAY SUMANDO LA CANTIDAD SI ES QUE YA ESTA AGREGADO
 function updateProductsInCart(product) {
   // 2
@@ -97,7 +100,7 @@ agregar(listaProductos);
 
 /// EVENTO PARA CONTROLAR LOS CLICKS EN BOTONES DE + Y - TANTO SEA PARA SUMAR CANTIDAD DE PRODUCTOS COMP PARA RESTAR
 parentElement.addEventListener("click", (e) => {
-  // Last
+ 
   const plusBtn = e.target.classList.contains("button-plus");
   const minusBtn = e.target.classList.contains("button-minus");
   if (plusBtn || minusBtn) {

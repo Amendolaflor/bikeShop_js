@@ -26,7 +26,7 @@ overlay.addEventListener("click", closeCart);
 
 /// Funcion para renderizar las cards de cada producto
 const crearFichaProducto = function (bici) {
-  let cont_father = document.getElementById("contenidoGenerado");
+  let cont_father = document.getElementById("productContainer");
   let cont_child = document.createElement("div");
   cont_child.innerHTML = `<div class="container">
                             <div class="product" style="width:20rem">
@@ -34,11 +34,11 @@ const crearFichaProducto = function (bici) {
                                     <div class="product-image">
                                     <img src=${bici.image} />
                                 <div class="product-over">
-                                    <button class="btn btn-small addToCart" id=${bici.id}>
+                                    <button class="btn btn-small addToCart" id="${bici.id}">
                                         <i class="fas fa-cart-plus"></i>Agregar
                                         al carrito
                                     </button>                                    
-                                    <a data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-small">Detalle</a>
+                                    <a data-toggle="modal" data-target=".bd-example-modal-lg" class="btn btn-small" id="detalle${bici.id}">Detalle</a>
                                 </div>
                                 </div>
                                 <div class="product-summary">
@@ -57,13 +57,33 @@ const crearFichaProducto = function (bici) {
 
   cont_father.appendChild(cont_child);
   let botones = document.getElementById(bici.id);
-  console.log(botones);
- 
+  console.log(botones); 
 };
 
-/// recorro el array de productos para crear una fichas por cada uno de sus indices
+
+const crearFichaDetalle = function(bici) {
+  let botonDetalle = document.getElementById(`detalle${bici.id}`);
+  botonDetalle.addEventListener("click", () => {
+    $("#insideModal").html(`<div class="container">
+                              <div class="row"> 
+                                <div class="col xs-12 md-6 cont_img-detalle">
+                                  <img src="${bici.image}" alt="bici" width="100%">
+                                </div>
+                                <div class="col xs-12 md-6 cont_descripcion">
+                                  <h3>${bici.name}</h3>
+                                  <p>${bici.detail}</p> 
+                                  <button type="button" class="btn btn-small" data-dismiss="modal" id="cerrar${bici.id}">Cerrar
+                                  </button>
+                                </div>
+                              </div>
+                            </div>`);
+  });
+}
+
+/// recorro el array de productos y ejecuto funciones para cada elemento 
 for (let bicicleta of todasLasBicicletas) {
-  crearFichaProducto(bicicleta);
+  crearFichaProducto(bicicleta);  
+  crearFichaDetalle(bicicleta)
 }
 
 /// Animaciones del slider de fotos

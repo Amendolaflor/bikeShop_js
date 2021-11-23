@@ -458,7 +458,7 @@ background: linear-gradient(90deg, rgba(39,102,120,1) 0%, rgba(22,135,167,0.9920
 background-color: #d9e0dfab;
 }
 .modal {
-    padding-top: 10%;
+    padding-top: 5%;
     
 }
 
@@ -474,6 +474,11 @@ main {
    
 }
 
+main>#productContainer {
+	padding-left: 100px;
+	padding-right: 100px;
+	justify-content: center;
+}
 .main-section {
    
     text-align: center;
@@ -601,11 +606,6 @@ main {
     color: #7e6c1f;
 }
 
-main>#contenidoGenerado {
-	padding-left: 100px;
-	padding-right: 100px;
-	justify-content: center;
-}
 
 /* ESTILOS BOTONES */
 .btn-small {
