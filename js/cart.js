@@ -19,7 +19,7 @@ for (let i = 0; i < todasLasBicicletas.length; i++) {
 }
 console.log(listaProductos);
 
-//// VARIABLES GLOBALES 
+//// VARIABLES GLOBALES Y ALMACENAMIENTO EN LOCALSTORAGE
 const parentElement = document.querySelector("#buyItems");
 const cartSumPrice = document.querySelector("#sum-prices");
 
@@ -39,7 +39,6 @@ const SumPrice = function () {
 
 };
 
-SumPrice()
 /// FUNCION PARA RENDERIZAR EL CARRITO
 const updateShoppingCartHTML = function () {
   localStorage.setItem("shoppingCart", JSON.stringify(productsInCart));
@@ -120,3 +119,4 @@ parentElement.addEventListener("click", (e) => {
     updateShoppingCartHTML();
   }
 });
+

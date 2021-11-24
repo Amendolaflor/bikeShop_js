@@ -751,11 +751,11 @@ main>#productContainer {
 .checkout  {
     margin: 10px;
 }
-.checkout:hover {
+/* .checkout:hover {
     background-color:  #126E82;
     color: white;
     
-}
+} */
 
 
   /* FOOTER */

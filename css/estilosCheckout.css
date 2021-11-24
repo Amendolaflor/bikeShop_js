@@ -1,3 +1,5 @@
+
+
 /* Fourmulario Chekcout */
 body {
     display: flex;
@@ -6,11 +8,11 @@ body {
     font-style: normal;
     font-weight: 400;
     background-color: #f6f5f5;
-}
+} 
 
 .wrapper {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin: 0 auto;
+    margin-top: 100px;
     width: 65%;
     display: flex;
     justify-content: center;
@@ -18,7 +20,7 @@ body {
     background-color: #D3E0EA ;
     box-shadow: 9px 13px 25px 0px rgba(49, 32, 32, 0.18);
     animation: slideUp 2000ms ease;
-}
+} 
 
 .container {
     width: 65%;
@@ -125,4 +127,5 @@ input:focus , button:focus {
 @media (max-width: 736px) {
     .wrapper {
     width: 100%;
-    }
+    } 
+}
