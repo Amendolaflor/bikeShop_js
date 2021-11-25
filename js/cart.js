@@ -36,8 +36,8 @@ const SumPrice = function () {
     sum += item.price;
   });
   return sum;
-
 };
+
 
 /// FUNCION PARA RENDERIZAR EL CARRITO
 const updateShoppingCartHTML = function () {
